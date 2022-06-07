@@ -25,7 +25,7 @@ function Login() {
     }
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: any) => {
     event.preventDefault();
     const result = await dispatch(getUserDetails({ ...formData }));
     console.log(result);
