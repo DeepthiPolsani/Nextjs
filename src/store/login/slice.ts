@@ -15,12 +15,9 @@ const initialState: LoginPageState = {
 export const getUserDetails = createAsyncThunk(
   "login/user",
   async (credentials: ILoginDataConditions) => {
-    const { username, password } = credentials;
     try {
-      const response = await validateUserLoginCredentials();
-      if (response?.username !== username || response?.password !== password) {
-        throw new Error("Incorrect Credentials");
-      }
+      const response = await validateUserLoginCredentials(credentials);
+      console.log(response);
       return response;
     } catch (_error) {
       throw new Error(error(_error));
