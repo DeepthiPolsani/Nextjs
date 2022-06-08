@@ -9,9 +9,9 @@ function Authguard({ children }: { children: any }) {
 
   function authCheck(url: string) {
     // redirect to login page if accessing a private page and not logged in
-    const publicPaths = ["/", "/login"];
+    const publicPaths = ["/profile"];
     const path = url.split("?")[0];
-    if (!userData.data && !publicPaths.includes(path)) {
+    if (!userData.data && publicPaths.includes(path)) {
       setAuthorized(false);
       router.push({
         pathname: "/login",
