@@ -1,4 +1,4 @@
-# pages/api vs server/controllers
+# Folder structure for Backend
 
 Contents:
 
@@ -8,13 +8,11 @@ Contents:
   * [Status](#status)
 * [Details](#details)
   * [Assumptions](#assumptions)
-  * [Positions](#positions)
   * [Argument](#argument)
   * [Implications](#implications)
 * [Related](#related)
   * [Related decisions](#related-decisions)
   * [Related requirements](#related-requirements)
-  * [Related artifacts](#related-artifacts)
   * [Related principles](#related-principles)
 * [Notes](#notes)
 
@@ -57,12 +55,16 @@ Decided on server/controllers. Open to new choices as they arrived.
 
 ### Assumptions
 
+We want to create a boilerplate that are modern, fast, reliable, responsive, etc.
+ 
+For that we are using Nextjs framework for boilerplate for quick respones.
+Typical modern web apps are reducing/eliminating the use of jQuery because of multiple reasons: 
 
+  * In order implement Nextjs as a full-stack feature,we used database(mongodb) for storing the data in backend.
 
+  * For implementing logic for backend,inside pages/api is the directly approach for smaller projects.
 
-
-### Positions
-
+  * We can implement the same logic inside server/controllers & provide the routes inside pages/api,for larger projects we can directly removing the complexcity of code by implementing logic here.
 
 
 ### Argument
@@ -93,12 +95,6 @@ The server/controllers we choose has to provide the routes again in pages/api fo
 ### Related requirements
 
 We need to properly integrate controllers with pages/api 
-
-
-### Related artifacts
-
-
-
 
 ### Related principles
 
