@@ -12,6 +12,9 @@ export class User {
   @Column("string")
   lastName: string;
 
-  @Column("boolean")
-  isActive: boolean;
+  @Column("string")
+  username: string;
+
+  @Column("string")
+  password: string;
 }
